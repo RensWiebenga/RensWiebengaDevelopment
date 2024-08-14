@@ -1,0 +1,10 @@
+.line {
+  width: 150px;
+  height: 5px;
+  background: red;
+  border-radius: 5px;
+}
+
+.icon {
+  color: red;
+}

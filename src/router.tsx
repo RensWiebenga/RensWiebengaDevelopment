@@ -4,13 +4,8 @@ import Index from "./routes/Index/Index";
 
 const router = createBrowserRouter([
   {
-    element: <AppShell />,
-    children: [
-      {
-        path: "/",
-        element: <Index />,
-      },
-    ],
+    path: "/",
+    element: <Index />,
   },
 ]);
 
