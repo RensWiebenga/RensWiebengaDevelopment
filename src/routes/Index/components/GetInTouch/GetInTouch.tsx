@@ -7,35 +7,56 @@ import {
   Group,
   SimpleGrid,
 } from "@mantine/core";
+import { useState } from "react";
 import { ContactIconsList } from "./ContactIcons";
 import classes from "./GetInTouch.module.css";
 
 export function GetInTouch() {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [message, setMessage] = useState("");
+
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
+
+    const mailtoLink = `mailto:renswiebenga@gmail.com?subject=${encodeURIComponent(
+      subject
+    )}&body=${encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+    )}`;
+
+    window.location.href = mailtoLink;
+  };
+
   return (
     <Paper shadow="md" radius="xl">
       <div className={classes.wrapper}>
         <div className={classes.innerContent}>
-          {/* All your existing content goes here */}
           <div className={classes.contacts}>
             <Text fz="lg" fw={700} className={classes.title} c="#fff">
               Contact information
             </Text>
             <ContactIconsList />
           </div>
-          <form
-            className={classes.form}
-            onSubmit={(event) => event.preventDefault()}
-          >
+          <form className={classes.form} onSubmit={handleSubmit}>
             <Text fz="lg" fw={700} className={classes.title}>
               Get in touch
             </Text>
             <div className={classes.fields}>
               <SimpleGrid cols={{ base: 1, sm: 2 }}>
-                <TextInput label="Your name" placeholder="Your name" />
+                <TextInput
+                  label="Your name"
+                  placeholder="Your name"
+                  value={name}
+                  onChange={(event) => setName(event.currentTarget.value)}
+                />
                 <TextInput
                   label="Your email"
-                  placeholder="hello@mantine.dev"
+                  placeholder="yourname@domain.com"
                   required
+                  value={email}
+                  onChange={(event) => setEmail(event.currentTarget.value)}
                 />
               </SimpleGrid>
               <TextInput
@@ -43,12 +64,16 @@ export function GetInTouch() {
                 label="Subject"
                 placeholder="Subject"
                 required
+                value={subject}
+                onChange={(event) => setSubject(event.currentTarget.value)}
               />
               <Textarea
                 mt="md"
                 label="Your message"
                 placeholder="Please include all relevant information"
                 minRows={3}
+                value={message}
+                onChange={(event) => setMessage(event.currentTarget.value)}
               />
               <Group justify="flex-end" mt="md">
                 <Button type="submit" className={classes.control}>
