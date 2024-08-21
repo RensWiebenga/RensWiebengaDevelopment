@@ -1,10 +1,10 @@
 .line {
   width: 150px;
   height: 5px;
-  background: red;
+  background: #0c67a1;
   border-radius: 5px;
 }
 
 .icon {
-  color: red;
+  color: #0c67a1;
 }

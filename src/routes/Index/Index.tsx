@@ -1,7 +1,6 @@
-import { Container } from "@mantine/core";
+import { Container, Space } from "@mantine/core";
 import { GridAsymmetrical } from "./components/GridAsymmetrical/GridAsymmetrical";
 import { HeaderSimple } from "./components/HeaderSimple/HeaderSimple";
-import { HeroContentLeft } from "./components/HeroContentLeft/HeroContentLeft";
 import FancyTitle from "./components/FancyTitle/FancyTitle";
 import AboutMeBlock from "./components/AboutMeBlock/AboutMeBlock";
 import { GetInTouch } from "./components/GetInTouch/GetInTouch";
@@ -12,12 +11,18 @@ export default function Index() {
     <div>
       <HeaderSimple />
       <HeroImageBackground />
+      <Space h="xl" />
       <Container>
         <FancyTitle title="Skills" icon="IconCode" />
+        <Space h="xl" />
         <GridAsymmetrical />
+        <Space h="xl" />
         <FancyTitle title="About" icon="IconBubble" />
+        <Space h="xl" />
         <AboutMeBlock />
+        <Space h="xl" />
         <FancyTitle title="Contact me" icon="IconMail" />
+        <Space h="xl" />
         <GetInTouch />
       </Container>
     </div>
