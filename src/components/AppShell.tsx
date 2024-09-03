@@ -2,7 +2,6 @@ import { AppShell as Shell, useMantineColorScheme } from "@mantine/core";
 import { useThemeSwitcher } from "../theme";
 import { Outlet } from "react-router-dom";
 import { HeaderSimple } from "../routes/Index/components/HeaderSimple/HeaderSimple";
-import "@mantine/carousel/styles.css";
 
 export default function AppShell() {
   const { setTheme, theme } = useThemeSwitcher();

@@ -4,9 +4,9 @@
   background: #0c67a1;
   border-radius: 5px;
 
-  background: var(--mantine-color-primary-6);
+  background: var(--mantine-color-primary-0);
 }
 
 .icon {
-  color: var(--mantine-color-primary-6);
+  color: var(--mantine-color-primary-0);
 }

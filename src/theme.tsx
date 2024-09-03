@@ -176,7 +176,18 @@ const darkTheme = mergeThemeOverrides(
   defaultTheme,
   createTheme({
     colors: {
-      primary: colorsTuple("#1281c7"),
+      primary: [
+        "#1191fa",
+        "#29e1ea",
+        "#1aa5f4",
+        "#1db1f2",
+        "#20bdf0",
+        "#1799f6",
+        "#23c9ee",
+        "#26d5ec",
+        "#2ca0e9",
+        "#148df8",
+      ],
       background: colorsTuple("#fff"),
     },
   })
@@ -186,7 +197,18 @@ const lightTheme = mergeThemeOverrides(
   defaultTheme,
   createTheme({
     colors: {
-      primary: colorsTuple("#0c67a1"),
+      primary: [
+        "#0c67a1",
+        "#5FCCDB",
+        "#44CADC",
+        "#2AC9DE",
+        "#1AC2D9",
+        "#11B7CD",
+        "#09ADC3",
+        "#0E99AC",
+        "#128797",
+        "#147885",
+      ],
       background: colorsTuple("#242424"),
     },
   })

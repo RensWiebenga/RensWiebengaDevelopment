@@ -1,4 +1,4 @@
-import { Title, Text, Container, Button, Overlay, Stack } from "@mantine/core";
+import { Title, Text, Container, Overlay, Stack, Anchor } from "@mantine/core";
 import Avatar from "../Avatar/Avatar";
 import classes from "./HeroImageBackground.module.css";
 
@@ -18,16 +18,18 @@ export function HeroImageBackground() {
           </Title>
 
           <Container size={640}>
-            <Text size="lg" className={classes.description}>
-              Build more reliable software with AI companion. AI is also trained
-              to detect lazy developers who do nothing and just complain on
-              Twitter.
+            <Text size="xl" className={classes.description}>
+              Senior Full Stack Developer
+            </Text>
+            <Text size="lg" className={classes.description} fs="italic">
+              “Jack of all trades master of none, though oftentimes better than
+              master of one.”
             </Text>
           </Container>
           <div className={classes.controls}>
-            <Button className={classes.control} size="lg">
-              Get in contact
-            </Button>
+            <Anchor className={classes.control} size="lg" href="#contact">
+              Get in touch
+            </Anchor>
             {/* <Button
               className={cx(classes.control, classes.secondaryControl)}
               size="lg"

@@ -30,7 +30,7 @@ function CardFunction({ image, title, description, languages }: CardProps) {
         <Text fw={500}>{title}</Text>
       </Group>
 
-      <Text size="sm" h={100} c="dimmed" lineClamp={3}>
+      <Text size="sm" h={100} c="dimmed" lineClamp={4}>
         {description}
       </Text>
 
