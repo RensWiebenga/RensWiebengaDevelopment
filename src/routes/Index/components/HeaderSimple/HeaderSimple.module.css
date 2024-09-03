@@ -21,7 +21,7 @@
   display: block;
   line-height: 1;
   padding: rem(8px) rem(12px);
-  border-radius: var(--mantine-radius-sm);
+  border-radius: var(--mantine-radius-xl);
   text-decoration: none;
   color: light-dark(var(--mantine-color-white-1), var(--mantine-color-white-1));
   font-size: var(--mantine-font-size-sm);
@@ -29,8 +29,12 @@
 
   @mixin hover {
     background-color: light-dark(
-      var(--mantine-color-gray-0),
+      var(--mantine-color-dark-6),
       var(--mantine-color-dark-6)
+    );
+    color: light-dark(
+      var(--mantine-color-white-1),
+      var(--mantine-color-white-1)
     );
   }
 

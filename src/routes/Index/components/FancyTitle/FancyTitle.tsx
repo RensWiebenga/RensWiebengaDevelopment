@@ -1,5 +1,10 @@
 import { Group, Stack, Title } from "@mantine/core";
-import { IconBubble, IconCode, IconMail } from "@tabler/icons-react";
+import {
+  IconUserScan,
+  IconSourceCode,
+  IconWorldCode,
+  IconMailBolt,
+} from "@tabler/icons-react";
 import classes from "./FancyTitle.module.css";
 
 export function FancyTitle({ title, icon }: { title: string; icon: string }) {
@@ -8,11 +13,19 @@ export function FancyTitle({ title, icon }: { title: string; icon: string }) {
       <Title order={1}>{title}</Title>
       <Group>
         <div className={classes.line} />
-        {icon === "IconCode" && <IconCode size={40} className={classes.icon} />}
-        {icon === "IconBubble" && (
-          <IconBubble size={40} className={classes.icon} />
+        {icon === "IconWorldCode" && (
+          <IconWorldCode size={50} className={classes.icon} />
         )}
-        {icon === "IconMail" && <IconMail size={40} className={classes.icon} />}
+
+        {icon === "IconMailBolt" && (
+          <IconMailBolt size={45} className={classes.icon} />
+        )}
+        {icon === "IconUserScan" && (
+          <IconUserScan size={50} className={classes.icon} />
+        )}
+        {icon === "IconSourceCode" && (
+          <IconSourceCode size={50} className={classes.icon} />
+        )}
         <div className={classes.line} />
       </Group>
     </Stack>

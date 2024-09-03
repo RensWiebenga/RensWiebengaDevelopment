@@ -13,6 +13,14 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.section {
+  scroll-margin-top: 80px; /* Adjust this value based on your header height */
+}
+
 a {
   font-weight: 500;
   color: #646cff;
@@ -47,7 +55,7 @@ button {
   transition: border-color 0.25s;
 }
 button:hover {
-  border-color: #646cff;
+  background-color: #313ae0 !important;
 }
 button:focus,
 button:focus-visible {

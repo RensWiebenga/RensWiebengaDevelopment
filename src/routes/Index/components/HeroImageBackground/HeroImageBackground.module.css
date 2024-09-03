@@ -5,6 +5,7 @@
   background-image: url("/src/assets/background_page_home.jpg");
   background-size: cover;
   background-position: center;
+  scroll-margin-top: 80px;
 
   @media (max-width: $mantine-breakpoint-xs) {
     padding-top: rem(80px);
@@ -64,6 +65,7 @@
 .control {
   height: rem(42px);
   font-size: var(--mantine-font-size-md);
+  background-color: var(--mantine-color-primary-0);
 
   &:not(:first-of-type) {
     margin-left: var(--mantine-spacing-md);
