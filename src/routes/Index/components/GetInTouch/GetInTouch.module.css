@@ -41,3 +41,7 @@
 .title {
   margin-bottom: 12px;
 }
+
+.control {
+  background-color: var(--mantine-color-blue-filled);
+}

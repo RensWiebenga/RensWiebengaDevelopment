@@ -150,7 +150,7 @@ const defaultTheme = createTheme({
     Switch: Switch.extend({
       styles: (currentTheme) => ({
         track: {
-          backgroundColor: currentTheme.colors.background[1],
+          backgroundColor: currentTheme.colors.gray[3],
           height: 24,
           width: 50,
         },
@@ -198,16 +198,16 @@ const lightTheme = mergeThemeOverrides(
   createTheme({
     colors: {
       primary: [
-        "#0c67a1",
-        "#5FCCDB",
-        "#44CADC",
-        "#2AC9DE",
-        "#1AC2D9",
-        "#11B7CD",
-        "#09ADC3",
-        "#0E99AC",
-        "#128797",
-        "#147885",
+        "#1372af",
+        "#29e1ea",
+        "#1aa5f4",
+        "#1db1f2",
+        "#20bdf0",
+        "#1799f6",
+        "#23c9ee",
+        "#26d5ec",
+        "#2ca0e9",
+        "#148df8",
       ],
       background: colorsTuple("#242424"),
     },

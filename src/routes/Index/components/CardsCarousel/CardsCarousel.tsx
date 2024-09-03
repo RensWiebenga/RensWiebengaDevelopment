@@ -7,7 +7,7 @@ import {
   useMantineTheme,
   rem,
   Image,
-  Badge,
+  Pill,
   Group,
 } from "@mantine/core";
 import classes from "./CardsCarousel.module.css";
@@ -36,13 +36,20 @@ function CardFunction({ image, title, description, languages }: CardProps) {
 
       <Group mt="md" mb="xs" gap={10} h={50} align="start">
         {languages.map((language) => (
-          <Badge key={language} color="primary" variant="outline">
+          <Pill
+            key={language}
+            size="sm"
+            style={{
+              backgroundColor: "var(--mantine-color-gray-1)",
+              color: "var(--mantine-color-gray-7)",
+            }}
+          >
             {language}
-          </Badge>
+          </Pill>
         ))}
       </Group>
 
-      <Button color="blue" fullWidth mt="md" radius="xl">
+      <Button color="blue" fullWidth mt="md" radius="xl" fw={700}>
         View details
       </Button>
     </Card>

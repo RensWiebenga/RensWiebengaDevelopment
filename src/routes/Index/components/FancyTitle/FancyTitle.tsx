@@ -10,7 +10,9 @@ import classes from "./FancyTitle.module.css";
 export function FancyTitle({ title, icon }: { title: string; icon: string }) {
   return (
     <Stack align="center" justify="center" gap="md">
-      <Title order={1}>{title}</Title>
+      <Title order={1} fw={700}>
+        {title}
+      </Title>
       <Group>
         <div className={classes.line} />
         {icon === "IconWorldCode" && (

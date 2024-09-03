@@ -27,7 +27,12 @@ export function HeroImageBackground() {
             </Text>
           </Container>
           <div className={classes.controls}>
-            <Anchor className={classes.control} size="lg" href="#contact">
+            <Anchor
+              className={classes.control}
+              size="lg"
+              href="#contact"
+              fw={700}
+            >
               Get in touch
             </Anchor>
             {/* <Button

@@ -40,6 +40,16 @@ export const initialData = [
   },
   { title: "MVC", categories: ["Design Pattern"], experience: "+20" },
   {
+    title: "Object Oriented",
+    categories: ["Design Pattern"],
+    experience: "+20",
+  },
+  {
+    title: "MVCS",
+    categories: ["Design Pattern"],
+    experience: "+20",
+  },
+  {
     title: ".Net C#",
     categories: ["Backend", "Frontend", "Programming"],
     experience: "+20",
@@ -68,7 +78,7 @@ export const initialData = [
   { title: "SASS", categories: ["Frontend"], experience: "+20" },
   {
     title: "Progressive Web Apps",
-    categories: ["Frontend", "Cross platform"],
+    categories: ["Frontend", "Cross Platform"],
     experience: "+/- 5",
   },
   {
@@ -84,29 +94,31 @@ export const initialData = [
   },
   { title: "Kontent.AI", categories: ["Backend", "CMS"], experience: "+20" },
   { title: "SharePoint", categories: ["Backend", "CMS"], experience: "+20" },
+  { title: "WordPress", categories: ["Backend", "CMS"], experience: "+/- 5" },
+  { title: "Joomla", categories: ["Backend", "CMS"], experience: "+/- 5" },
   {
     title: "Ionic",
-    categories: ["Cross platform", "Frontend"],
+    categories: ["Cross Platform", "Frontend"],
     experience: "2",
   },
   {
     title: "Cordova",
-    categories: ["Cross platform", "Frontend"],
+    categories: ["Cross Platform", "Frontend"],
     experience: "3",
   },
   {
     title: "PhoneGap",
-    categories: ["Cross platform", "Frontend"],
+    categories: ["Cross Platform", "Frontend"],
     experience: "2",
   },
   {
     title: "React Native",
-    categories: ["Cross platform", "Frontend"],
+    categories: ["Cross Platform", "Frontend"],
     experience: "1",
   },
   {
     title: "Mobile Application Development",
-    categories: ["Cross platform"],
+    categories: ["Cross Platform"],
     experience: "+/- 10",
   },
   { title: "Adobe Photoshop", categories: ["Graphics"], experience: "+20" },

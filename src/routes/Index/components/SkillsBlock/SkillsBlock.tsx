@@ -43,7 +43,8 @@ export function SkillsBlock() {
           return (
             <Pill
               key={category}
-              size="lg"
+              size="xl"
+              fw={700}
               onMouseEnter={() => {
                 setHoveredCategory(category);
                 setHoveredCategoryColor(categoryColor);
@@ -55,7 +56,7 @@ export function SkillsBlock() {
               style={{
                 cursor: "pointer",
                 background: categoryColor,
-                color: hoveredCategory === category ? "white" : "black",
+                color: "var(--mantine-color-gray-9",
               }}
             >
               {category}
@@ -66,39 +67,55 @@ export function SkillsBlock() {
       <Group justify={"center"}>
         {/* Render smaller skill pills */}
         {data.map((skill) => (
-          <Popover
+          <Pill
             key={skill.title}
-            width={200}
-            position="bottom"
-            withArrow
-            shadow="md"
-            opened={hoveredSkill === skill.title} // Only open the popover if this skill is hovered
+            onMouseEnter={() => setHoveredSkill(skill.title)}
+            onMouseLeave={() => setHoveredSkill(null)}
+            size="sm"
+            style={{
+              backgroundColor: skill.categories.includes(hoveredCategory ?? "")
+                ? hoveredCategoryColor
+                : `var(--mantine-color-gray-1)`,
+              color: skill.categories.includes(hoveredCategory ?? "")
+                ? "white"
+                : `var(--mantine-color-gray-7)`,
+            }}
           >
-            <Popover.Target>
-              <Pill
-                onMouseEnter={() => setHoveredSkill(skill.title)}
-                onMouseLeave={() => setHoveredSkill(null)}
-                size="sm"
-                style={{
-                  backgroundColor: skill.categories.includes(
-                    hoveredCategory ?? ""
-                  )
-                    ? hoveredCategoryColor
-                    : `var(--mantine-color-gray-1)`,
-                  color: skill.categories.includes(hoveredCategory ?? "")
-                    ? "white"
-                    : `var(--mantine-color-gray-7)`,
-                }}
-              >
-                {skill.title}
-              </Pill>
-            </Popover.Target>
-            <Popover.Dropdown
-              style={{ pointerEvents: "none", textAlign: "center" }}
-            >
-              <Text size="sm">Experience: {skill.experience} projects</Text>
-            </Popover.Dropdown>
-          </Popover>
+            {skill.title}
+          </Pill>
+          // <Popover
+          //   key={skill.title}
+          //   width={200}
+          //   position="bottom"
+          //   withArrow
+          //   shadow="md"
+          //   opened={hoveredSkill === skill.title} // Only open the popover if this skill is hovered
+          // >
+          //   <Popover.Target>
+          //     <Pill
+          //       onMouseEnter={() => setHoveredSkill(skill.title)}
+          //       onMouseLeave={() => setHoveredSkill(null)}
+          //       size="sm"
+          //       style={{
+          //         backgroundColor: skill.categories.includes(
+          //           hoveredCategory ?? ""
+          //         )
+          //           ? hoveredCategoryColor
+          //           : `var(--mantine-color-gray-1)`,
+          //         color: skill.categories.includes(hoveredCategory ?? "")
+          //           ? "white"
+          //           : `var(--mantine-color-gray-7)`,
+          //       }}
+          //     >
+          //       {skill.title}
+          //     </Pill>
+          //   </Popover.Target>
+          //   <Popover.Dropdown
+          //     style={{ pointerEvents: "none", textAlign: "center" }}
+          //   >
+          //     <Text size="sm">Experience: {skill.experience} projects</Text>
+          //   </Popover.Dropdown>
+          // </Popover>
         ))}
       </Group>
     </Stack>
