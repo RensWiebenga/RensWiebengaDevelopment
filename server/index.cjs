@@ -8,7 +8,7 @@ const PORT = process.env.PORT || 3001;
 
 const app = express();
 
-app.use(express.static(path.resolve(__dirname, "../dist")));
+// Apply CORS middleware
 app.use(cors());
 app.use(bodyParser.json());
 
@@ -54,10 +54,6 @@ app.post("/api/contact", (req, res) => {
       res.json({ status: "Message Sent" });
     }
   });
-});
-
-app.get("*", (req, res) => {
-  res.sendFile(path.resolve(__dirname, "../dist", "index.html"));
 });
 
 app.listen(PORT, () => {
