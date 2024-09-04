@@ -37,6 +37,7 @@ app.post("/api/contact", (req, res) => {
   const name = req.body.name;
   const email = req.body.email;
   const message = req.body.message;
+  const subject = req.body.subject;
 
   const mail = {
     from: name,
@@ -44,6 +45,7 @@ app.post("/api/contact", (req, res) => {
     subject: "Contact Form Submission",
     html: `<p>Name: ${name}</p>
            <p>Email: ${email}</p>
+            <p>Subject: ${subject}</p>
            <p>Message: ${message}</p>`,
   };
 
