@@ -67,7 +67,7 @@ export function HeaderSimple({
           checked={theme === "dark"}
         />
 
-        <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" />
+        {/* <Burger opened={opened} onClick={toggle} hiddenFrom="xs" size="sm" /> */}
       </Container>
     </header>
   );

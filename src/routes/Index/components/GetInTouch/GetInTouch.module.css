@@ -17,7 +17,7 @@
     flex-direction: column;
   }
 
-  background-image: url("/src/assets/background_page_about.jpg"),
+  background-image: url("/src/assets/background_page_about_dark.jpg"),
     linear-gradient(
       -60deg,
       var(--mantine-color-blue-4) 0,
@@ -36,6 +36,11 @@
   background-color: rgba(0, 0, 0, 0.5);
   border-radius: var(--mantine-radius-md);
   color: #fff;
+  gap: 20px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    flex-direction: column;
+  }
 }
 
 .title {
@@ -44,4 +49,5 @@
 
 .control {
   background-color: var(--mantine-color-blue-filled);
+  width: 100%;
 }

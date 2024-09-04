@@ -38,6 +38,10 @@
     );
   }
 
+  @media (max-width: $mantine-breakpoint-sm) {
+    display: none;
+  }
+
   [data-mantine-color-scheme] &[data-active] {
     background-color: var(--mantine-color-blue-filled);
     color: var(--mantine-color-white);

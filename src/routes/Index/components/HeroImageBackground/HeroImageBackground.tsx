@@ -19,7 +19,7 @@ export function HeroImageBackground() {
 
           <Container size={640}>
             <Text size="xl" className={classes.description}>
-              Senior Full Stack Developer
+              Full Stack Developer
             </Text>
             <Text size="lg" className={classes.description} fs="italic">
               “Jack of all trades master of none, though oftentimes better than
