@@ -17,16 +17,25 @@ export function GetInTouch() {
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
 
-    const mailtoLink = `mailto:renswiebenga@gmail.com?subject=${encodeURIComponent(
-      subject
-    )}&body=${encodeURIComponent(
-      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-    )}`;
+    let response = await fetch("http://localhost:3001/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ name, email, subject, message }),
+    });
 
-    window.location.href = mailtoLink;
+    let result = await response.json();
+
+    if (result.code === 200) {
+      setName("");
+      setEmail("");
+      setSubject("");
+      setMessage("");
+    }
   };
 
   return (

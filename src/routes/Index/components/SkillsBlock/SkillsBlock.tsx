@@ -1,4 +1,4 @@
-import { Group, Popover, Pill, Stack, Text } from "@mantine/core";
+import { Group, Pill, Stack } from "@mantine/core";
 import { useState, useEffect } from "react";
 import { initialData } from "./InitialData";
 
@@ -30,7 +30,7 @@ export function SkillsBlock() {
 
   // State to track the hovered category, hovered skill, and its color
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
-  const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
+  // const [hoveredSkill, setHoveredSkill] = useState<string | null>(null);
   const [hoveredCategoryColor, setHoveredCategoryColor] = useState<string>("");
 
   return (
@@ -69,8 +69,8 @@ export function SkillsBlock() {
         {data.map((skill) => (
           <Pill
             key={skill.title}
-            onMouseEnter={() => setHoveredSkill(skill.title)}
-            onMouseLeave={() => setHoveredSkill(null)}
+            // onMouseEnter={() => setHoveredSkill(skill.title)}
+            // onMouseLeave={() => setHoveredSkill(null)}
             size="sm"
             style={{
               backgroundColor: skill.categories.includes(hoveredCategory ?? "")
