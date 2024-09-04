@@ -9,7 +9,6 @@ import { SkillsBlock } from "./components/SkillsBlock/SkillsBlock";
 export default function Index() {
   return (
     <div>
-      {/* <HeaderSimple /> */}
       <HeroImageBackground />
       <Space h="xl" />
       <Container>

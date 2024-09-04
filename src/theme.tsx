@@ -131,6 +131,12 @@ const defaultTheme = createTheme({
           size: "xl",
         },
       },
+      styles: () => ({
+        inner: {
+          left: 0,
+          right: 0,
+        },
+      }),
     }),
     AppShell: AppShell.extend({
       defaultProps: {
