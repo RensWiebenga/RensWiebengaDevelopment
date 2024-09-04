@@ -6,7 +6,6 @@ import {
   Button,
   Group,
   SimpleGrid,
-  Overlay,
 } from "@mantine/core";
 import { useState } from "react";
 import { ContactIconsList } from "./ContactIcons";
@@ -17,9 +16,13 @@ export function GetInTouch() {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, setLoading] = useState(false);
+  const [buttonText, setButtonText] = useState("Send message");
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    setLoading(true);
 
     let response = await fetch(
       "https://renswiebengadevelopment.onrender.com/api/contact",
@@ -34,12 +37,21 @@ export function GetInTouch() {
 
     let result = await response.json();
 
-    if (result.code === 200) {
+    if (result.status === "Message Sent") {
       setName("");
       setEmail("");
       setSubject("");
       setMessage("");
     }
+
+    setTimeout(() => {
+      setLoading(false);
+      setButtonText("Message sent!");
+    }, 1000);
+
+    setTimeout(() => {
+      setButtonText("Send new message");
+    }, 5000);
   };
 
   return (
@@ -60,7 +72,7 @@ export function GetInTouch() {
               <SimpleGrid cols={{ base: 1, sm: 2 }}>
                 <TextInput
                   label="Your name"
-                  placeholder="Your name"
+                  placeholder="John Doe"
                   value={name}
                   onChange={(event) => setName(event.currentTarget.value)}
                 />
@@ -75,7 +87,7 @@ export function GetInTouch() {
               <TextInput
                 mt="md"
                 label="Subject"
-                placeholder="Subject"
+                placeholder="New project, collaboration, etc."
                 required
                 value={subject}
                 onChange={(event) => setSubject(event.currentTarget.value)}
@@ -83,14 +95,18 @@ export function GetInTouch() {
               <Textarea
                 mt="md"
                 label="Your message"
-                placeholder="Please include all relevant information"
+                placeholder="I'd like to discuss..."
                 minRows={3}
                 value={message}
                 onChange={(event) => setMessage(event.currentTarget.value)}
               />
               <Group justify="flex-end" mt="md">
-                <Button type="submit" className={classes.control}>
-                  Send message
+                <Button
+                  type="submit"
+                  className={classes.control}
+                  loading={loading}
+                >
+                  {buttonText}
                 </Button>
               </Group>
             </div>

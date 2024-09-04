@@ -72,7 +72,7 @@ const defaultTheme = createTheme({
   colors: {
     primary: colorsTuple("#1191fa"),
     corporate: colorsTuple("#1961AB"),
-    link: colorsTuple("#1A21D5"),
+    link: colorsTuple("#1191fa"),
     txt: colorsTuple("#001021"),
     white: colorsTuple("#FFFFFF"),
     secondary: colorsTuple("#fc6039"),
@@ -177,16 +177,16 @@ const darkTheme = mergeThemeOverrides(
   createTheme({
     colors: {
       primary: [
-        "#1191fa",
-        "#29e1ea",
-        "#1aa5f4",
-        "#1db1f2",
-        "#20bdf0",
-        "#1799f6",
-        "#23c9ee",
-        "#26d5ec",
-        "#2ca0e9",
-        "#148df8",
+        "#1191fa", // Lighter blue
+        "#1084f5",
+        "#0f77ef",
+        "#0e6be9",
+        "#0d5fe4",
+        "#0c53de",
+        "#0b47d8",
+        "#0a3cd3",
+        "#0930cd",
+        "#0272ce", // Darker blue
       ],
       background: colorsTuple("#fff"),
     },
@@ -199,7 +199,7 @@ const lightTheme = mergeThemeOverrides(
     colors: {
       primary: [
         "#1372af",
-        "#29e1ea",
+        "#1084f5",
         "#1aa5f4",
         "#1db1f2",
         "#20bdf0",

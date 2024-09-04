@@ -1,6 +1,7 @@
 import { Group, Pill, Stack } from "@mantine/core";
 import { useState, useEffect } from "react";
 import { initialData } from "./InitialData";
+import classes from "./SkillsBlock.module.css";
 
 // Utility function to shuffle an array
 function shuffleArray(array: any[]) {
@@ -45,6 +46,7 @@ export function SkillsBlock() {
               key={category}
               size="xl"
               fw={700}
+              className={classes.categoryPill}
               onMouseEnter={() => {
                 setHoveredCategory(category);
                 setHoveredCategoryColor(categoryColor);
@@ -54,9 +56,7 @@ export function SkillsBlock() {
                 setHoveredCategoryColor("");
               }}
               style={{
-                cursor: "pointer",
                 background: categoryColor,
-                color: "var(--mantine-color-gray-9",
               }}
             >
               {category}
@@ -75,7 +75,7 @@ export function SkillsBlock() {
             style={{
               backgroundColor: skill.categories.includes(hoveredCategory ?? "")
                 ? hoveredCategoryColor
-                : `var(--mantine-color-gray-1)`,
+                : `var(--mantine-color-gray-2)`,
               color: skill.categories.includes(hoveredCategory ?? "")
                 ? "white"
                 : `var(--mantine-color-gray-7)`,
@@ -101,7 +101,7 @@ export function SkillsBlock() {
           //           hoveredCategory ?? ""
           //         )
           //           ? hoveredCategoryColor
-          //           : `var(--mantine-color-gray-1)`,
+          //           : `var(--mantine-color-gray-2)`,
           //         color: skill.categories.includes(hoveredCategory ?? "")
           //           ? "white"
           //           : `var(--mantine-color-gray-7)`,

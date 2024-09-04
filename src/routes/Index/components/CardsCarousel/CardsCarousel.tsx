@@ -52,7 +52,7 @@ function CardFunction({ image, title, description, languages }: CardProps) {
             key={language}
             size="sm"
             style={{
-              backgroundColor: "var(--mantine-color-gray-1)",
+              backgroundColor: "var(--mantine-color-gray-2)",
               color: "var(--mantine-color-gray-7)",
             }}
           >

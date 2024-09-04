@@ -1,5 +1,4 @@
-import { Container, Group, Burger, Switch, Anchor } from "@mantine/core";
-import { useDisclosure } from "@mantine/hooks";
+import { Container, Group, Switch, Anchor } from "@mantine/core";
 import classes from "./HeaderSimple.module.css";
 import Logo from "../Logo/Logo";
 import { ChangeEventHandler, useEffect, useState } from "react";
@@ -19,7 +18,6 @@ export function HeaderSimple({
   onThemeChange: ChangeEventHandler<HTMLInputElement>;
   theme: string;
 }) {
-  const [opened, { toggle }] = useDisclosure(false);
   const [active, setActive] = useState(links[0].link);
 
   useEffect(() => {

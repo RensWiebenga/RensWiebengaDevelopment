@@ -34,8 +34,12 @@ function ContactIcon({
 const MOCKDATA = [
   { title: "Email", description: "renswiebenga@gmail.com", icon: IconAt },
   // { title: "Phone", description: "+49 (800) 335 35 35", icon: IconPhone },
-  { title: "Based in", description: "Utrecht", icon: IconMapPin },
-  // { title: "Working hours", description: "8 a.m. – 11 p.m.", icon: IconSun },
+  {
+    title: "Based in",
+    description: "Utrecht, The Netherlands",
+    icon: IconMapPin,
+  },
+  { title: "Working hours", description: "8 a.m. – 10 p.m.", icon: IconSun },
 ];
 
 export function ContactIconsList() {
