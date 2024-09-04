@@ -72,11 +72,12 @@ const defaultTheme = createTheme({
   colors: {
     primary: colorsTuple("#1191fa"),
     corporate: colorsTuple("#1961AB"),
-    link: colorsTuple("#1A21D5"),
+    link: colorsTuple("#1191fa"),
     txt: colorsTuple("#001021"),
     white: colorsTuple("#FFFFFF"),
     secondary: colorsTuple("#fc6039"),
     black: colorsTuple("#001021"),
+    background: colorsTuple("#fff"),
   },
   components: {
     Button: Button.extend({
@@ -84,7 +85,6 @@ const defaultTheme = createTheme({
         radius: "xl",
         size: "md",
         autoContrast: true,
-
         loaderProps: { type: "dots" },
       },
     }),
@@ -148,18 +148,17 @@ const defaultTheme = createTheme({
     }),
 
     Switch: Switch.extend({
-      styles: {
+      styles: (currentTheme) => ({
         track: {
-          backgroundColor: "white",
-          borderColor: "#A9A9A9",
+          backgroundColor: currentTheme.colors.gray[3],
           height: 24,
           width: 50,
         },
         thumb: {
-          backgroundColor: "blue",
+          backgroundColor: currentTheme.colors.primary[0], // Dynamically set the thumb color based on the primary color
           border: "none",
         },
-      },
+      }),
     }),
   },
 });
@@ -177,7 +176,19 @@ const darkTheme = mergeThemeOverrides(
   defaultTheme,
   createTheme({
     colors: {
-      primary: colorsTuple("#1191fa"),
+      primary: [
+        "#1191fa", // Lighter blue
+        "#1084f5",
+        "#0f77ef",
+        "#0e6be9",
+        "#0d5fe4",
+        "#0c53de",
+        "#0b47d8",
+        "#0a3cd3",
+        "#0930cd",
+        "#0272ce", // Darker blue
+      ],
+      background: colorsTuple("#fff"),
     },
   })
 );
@@ -186,7 +197,19 @@ const lightTheme = mergeThemeOverrides(
   defaultTheme,
   createTheme({
     colors: {
-      primary: colorsTuple("#fc6039"),
+      primary: [
+        "#1372af",
+        "#1084f5",
+        "#1aa5f4",
+        "#1db1f2",
+        "#20bdf0",
+        "#1799f6",
+        "#23c9ee",
+        "#26d5ec",
+        "#2ca0e9",
+        "#148df8",
+      ],
+      background: colorsTuple("#242424"),
     },
   })
 );
@@ -222,7 +245,6 @@ export default function ThemeProvider({
     key: "theme",
     defaultValue: defaultTheme,
   });
-
   const [currentTheme, currentVariables] = themes[currentThemeName];
 
   const handleThemeSwitch = (theme: keyof typeof themes) => {
@@ -232,6 +254,7 @@ export default function ThemeProvider({
   return (
     <MantineProvider
       theme={currentTheme}
+      defaultColorScheme={currentThemeName}
       cssVariablesResolver={currentVariables}
     >
       <ThemeSwitcherContext.Provider

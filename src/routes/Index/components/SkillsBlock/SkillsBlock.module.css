@@ -1,0 +1,4 @@
+.categoryPill {
+  cursor: pointer;
+  color: var(--mantine-color-white);
+}

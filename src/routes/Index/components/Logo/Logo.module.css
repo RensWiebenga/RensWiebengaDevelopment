@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  img {
+    height: 40px;
+  }
+
+  .title {
+    color: #fff;
+    font-size: 20px;
+    line-height: 26px;
+    text-transform: uppercase;
+
+    @media (max-width: $mantine-breakpoint-md) {
+      width: 155px;
+    }
+  }
+}
