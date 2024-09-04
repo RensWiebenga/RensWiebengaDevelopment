@@ -12,6 +12,18 @@ import {
 } from "@mantine/core";
 import classes from "./CardsCarousel.module.css";
 
+// Importing images explicitly
+import vaccinatieImage from "../../../../assets/Projects/VaccinatieApp/VaccinationAppLaptopSmall.jpg";
+import embassyImage from "../../../../assets/Projects/FindMyEmbassy/FindMyEmbassyLaptopPhoneSmall.jpg";
+import startdossierImage from "../../../../assets/Projects/Startdossier/StartdossierLaptopSmall.jpg";
+import thirtySecondSImage from "../../../../assets/Projects/32nds/32ndsLaptopPhoneSmall.jpg";
+import emodulewijzerImage from "../../../../assets/Projects/Emodulewijzer/E-ModulewijzerLaptopPhoneSmall.jpg";
+import dnaPoliImage from "../../../../assets/Projects/DNAPoli/DNAPoliLaptopSmall.jpg";
+import campaignImage from "../../../../assets/Projects/Campaign/CampaignLaptopSmall.jpg";
+import loopbaanEnqueteImage from "../../../../assets/Projects/LoopbaanEnquete/LoopbaanEnqueteLaptopSmall.jpg";
+import gameRealmImage from "../../../../assets/Projects/GameRealm/GameRealmLaptopSmall.jpg";
+import memesImage from "../../../../assets/Projects/IWantOneOfThoseMemes/IWantOneOfThoseMemesLaptopSmall.jpg";
+
 interface CardProps {
   image: string;
   title: string;
@@ -56,9 +68,10 @@ function CardFunction({ image, title, description, languages }: CardProps) {
   );
 }
 
+// Update the data array with the imported images
 const data = [
   {
-    image: "/src/assets/Projects/VaccinatieApp/VaccinationAppLaptopSmall.jpg",
+    image: vaccinatieImage,
     title: "Vaccination application",
     description:
       "This application has been initially built to invite and vaccinate UMC and WKZ employees to the covid vaccines. In the meantime it has been expanded to allow for a myriad of vaccinations for employees, students and patients.",
@@ -74,10 +87,8 @@ const data = [
     ],
     link: "",
   },
-
   {
-    image:
-      "/src/assets/Projects/FindMyEmbassy/FindMyEmbassyLaptopPhoneSmall.jpg",
+    image: embassyImage,
     title: "Find My Embassy",
     description:
       "This progressive web application allows people to find the nearest embassy in case of an emergency. It also shows emergency contacts like police, fire departments and ambulances.",
@@ -93,7 +104,7 @@ const data = [
     link: "https://findmyembassy.azurewebsites.Net/",
   },
   {
-    image: "/src/assets/Projects/Startdossier/StartdossierLaptopSmall.jpg",
+    image: startdossierImage,
     title: "Startdossier P&O",
     description:
       "This application is designed to help managers to find employees and guide them through the onboarding process.",
@@ -110,7 +121,7 @@ const data = [
     link: "",
   },
   {
-    image: "/src/assets/Projects/32nds/32ndsLaptopPhoneSmall.jpg",
+    image: thirtySecondSImage,
     title: "Thirty SecondS",
     description:
       "A small hobby project to make it easier for people to play the game Thirty Seconds where ever they are.",
@@ -118,8 +129,7 @@ const data = [
     link: "http://32nds.nl/bord.html",
   },
   {
-    image:
-      "/src/assets/Projects/Emodulewijzer/E-ModulewijzerLaptopPhoneSmall.jpg",
+    image: emodulewijzerImage,
     title: "E-modulewijzer",
     description:
       "This application is designed to help assess the price of the production of a e-learning module for medical students.",
@@ -136,7 +146,7 @@ const data = [
     link: "",
   },
   {
-    image: "/src/assets/Projects/DNAPoli/DNAPoliLaptopSmall.jpg",
+    image: dnaPoliImage,
     title: "DNA Poli",
     description:
       "Application designed to help patients with certain heritary ailments to invite their family members to get a dna-test.",
@@ -153,7 +163,7 @@ const data = [
     link: "https://dna-poli.nl/",
   },
   {
-    image: "/src/assets/Projects/Campaign/CampaignLaptopSmall.jpg",
+    image: campaignImage,
     title: "UMC and WKZ Campaigns",
     description:
       "This application allows Marketing and Communication to create and manage campaigns. One of the specifiec features being displayed here is the timeline which allows for a care path of patients to be stipulated and presented.",
@@ -167,11 +177,10 @@ const data = [
     link: "https://www.umcutrecht.nl/nl/info/mr-linac",
   },
   {
-    image:
-      "/src/assets/Projects/LoopbaanEnquete/LoopbaanEnqueteLaptopSmall.jpg",
+    image: loopbaanEnqueteImage,
     title: "Career Survey",
     description:
-      "This application departments to accurately follow the perception of career development of employees. ",
+      "This application departments to accurately follow the perception of career development of employees.",
     languages: [
       "HTML",
       "LESS",
@@ -183,7 +192,7 @@ const data = [
     link: "https://loopbaanenquete.azurewebsites.Net/",
   },
   {
-    image: "/src/assets/Projects/GameRealm/GameRealmLaptopSmall.jpg",
+    image: gameRealmImage,
     title: "GameRealm",
     description:
       "Gamerealm is a platform created for gamers and indy game developers. Gamerealm functions as a platform for gamers to find the most popular games on the web while it allows developers to display their work publicly.",
@@ -191,8 +200,7 @@ const data = [
     link: "",
   },
   {
-    image:
-      "/src/assets/Projects/IWantOneOfThoseMemes/IWantOneOfThoseMemesLaptopSmall.jpg",
+    image: memesImage,
     title: "I want one of those memes",
     description:
       "The webshop I want one of those memes is a side-project of mine. It is a business venture created to sell meme-merchandise.",
