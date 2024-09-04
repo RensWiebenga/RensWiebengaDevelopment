@@ -17,7 +17,7 @@ import vaccinatieImage from "../../../../assets/Projects/VaccinatieApp/Vaccinati
 import embassyImage from "../../../../assets/Projects/FindMyEmbassy/FindMyEmbassyLaptopPhoneSmall.jpg";
 import startdossierImage from "../../../../assets/Projects/Startdossier/StartdossierLaptopSmall.jpg";
 import thirtySecondSImage from "../../../../assets/Projects/32nds/32ndsLaptopPhoneSmall.jpg";
-import emodulewijzerImage from "../../../../assets/Projects/Emodulewijzer/E-ModulewijzerLaptopPhoneSmall.jpg";
+import emodulewijzerImage from "../../../../assets/Projects/EModulewijzer/EModulewijzerLaptopPhoneSmall.jpg";
 import dnaPoliImage from "../../../../assets/Projects/DNAPoli/DNAPoliLaptopSmall.jpg";
 import campaignImage from "../../../../assets/Projects/Campaign/CampaignLaptopSmall.jpg";
 import loopbaanEnqueteImage from "../../../../assets/Projects/LoopbaanEnquete/LoopbaanEnqueteLaptopSmall.jpg";
