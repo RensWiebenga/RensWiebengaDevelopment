@@ -78,7 +78,7 @@ export function GetInTouch() {
                 />
                 <TextInput
                   label="Your email"
-                  placeholder="yourname@domain.com"
+                  placeholder="johndoe@domain.com"
                   required
                   value={email}
                   onChange={(event) => setEmail(event.currentTarget.value)}
