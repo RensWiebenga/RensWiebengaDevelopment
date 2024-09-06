@@ -9,13 +9,31 @@
   }
 
   .title {
-    color: #fff;
+    color: light-dark(#000, #fff);
     font-size: 20px;
     line-height: 26px;
     text-transform: uppercase;
 
     @media (max-width: $mantine-breakpoint-md) {
       width: 155px;
+      font-size: 18px;
+      line-height: 24px;
     }
+
+    span {
+      color: var(--mantine-color-primary-0);
+      font-weight: 700;
+    }
+  }
+
+  .logo {
+    background-image: light-dark(
+      url(/src/assets/logo_black.png),
+      url(/src/assets/logo_white.png)
+    );
+    background-size: 84px;
+    background-repeat: no-repeat;
+    width: 84px;
+    height: 44px;
   }
 }
