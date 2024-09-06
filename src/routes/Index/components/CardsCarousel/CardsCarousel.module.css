@@ -1,8 +1,11 @@
 .cardWrapper {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%; /* Ensure the card takes up the full height */
+}
+
+.cardContent {
+  flex-grow: 1; /* Pushes the content upwards */
 }
 
 .card {
