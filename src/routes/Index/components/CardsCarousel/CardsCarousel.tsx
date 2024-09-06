@@ -34,7 +34,7 @@ function CardFunction({
   onViewDetails,
 }: CardProps) {
   return (
-    <Card padding="lg" radius="md" withBorder>
+    <Card padding="lg" radius="md" withBorder className={classes.cardWrapper}>
       <Card.Section>
         <Image src={image} alt={title} />
       </Card.Section>
@@ -47,7 +47,7 @@ function CardFunction({
         {description}
       </Text>
 
-      <Group mt="md" mb="xs" gap={10} h={50} align="start">
+      <Group mt="md" mb="xs" gap={10} align="start">
         {languages.map((language) => (
           <Pill
             key={language}

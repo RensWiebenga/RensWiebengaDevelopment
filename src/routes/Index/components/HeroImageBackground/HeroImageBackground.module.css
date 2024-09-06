@@ -1,6 +1,6 @@
 .wrapper {
   position: relative;
-  padding-top: rem(180px);
+  padding-top: rem(150px);
   padding-bottom: rem(130px);
   background-image: url("/src/assets/background_page_home.jpg");
   background-size: cover;
@@ -40,6 +40,15 @@
 }
 
 .description {
+  color: var(--mantine-color-gray-0);
+  text-align: center;
+
+  @media (max-width: $mantine-breakpoint-xs) {
+    font-size: var(--mantine-font-size-lg);
+  }
+}
+
+.slogan {
   color: var(--mantine-color-gray-0);
   text-align: center;
 

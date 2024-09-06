@@ -18,12 +18,30 @@ export function HeroImageBackground() {
           </Title>
 
           <Container size={640}>
-            <Text size="xl" className={classes.description}>
+            <Text size="xl" className={classes.description} mb={10}>
               Full Stack Developer
             </Text>
-            <Text size="lg" className={classes.description} fs="italic">
-              “Jack of all trades master of none, though oftentimes better than
-              master of one.”
+            <Text size="lg" className={classes.slogan} fs="italic">
+              “
+              <Text
+                component="span"
+                inherit
+                className={classes.highlight}
+                fw={700}
+              >
+                Jack of all trades
+              </Text>{" "}
+              is a master of none,
+              <br /> though oftentimes{" "}
+              <Text
+                component="span"
+                inherit
+                className={classes.highlight}
+                fw={700}
+              >
+                better than master of one
+              </Text>
+              “
             </Text>
           </Container>
           <div className={classes.controls}>

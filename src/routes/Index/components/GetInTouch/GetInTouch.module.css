@@ -17,6 +17,10 @@
     flex-direction: column;
   }
 
+  @media (max-width: $mantine-breakpoint-xs) {
+    padding: var(--mantine-spacing-md);
+  }
+
   background-image: url("/src/assets/background_page_about_dark.jpg"),
     linear-gradient(
       -60deg,
