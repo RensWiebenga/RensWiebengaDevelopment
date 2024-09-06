@@ -194,6 +194,7 @@ const darkTheme = mergeThemeOverrides(
         "#0930cd",
         "#0272ce", // Darker blue
       ],
+      // headerBackground: colorsTuple("#000"),
       background: colorsTuple("#fff"),
     },
   })
@@ -215,6 +216,7 @@ const lightTheme = mergeThemeOverrides(
         "#2ca0e9",
         "#148df8",
       ],
+      // headerBackground: colorsTuple("#fff"),
       background: colorsTuple("#242424"),
     },
   })

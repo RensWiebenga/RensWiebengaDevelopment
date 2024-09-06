@@ -18,8 +18,8 @@ export default function AboutMeBlock() {
       </Text>
 
       <Text size="lg" className={classes.textBlock}>
-        I enjoy climbing and bouldering particular, playing video games, being
-        outside, and travel to explore new places. I am dedicated to earning
+        I enjoy climbing, particularly bouldering, playing video games, being
+        outdoors, and traveling to explore new places. I am dedicated to gaining
         experience points.
       </Text>
     </Group>

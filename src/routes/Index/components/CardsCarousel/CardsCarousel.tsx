@@ -6,7 +6,6 @@ import {
   Text,
   Button,
   useMantineTheme,
-  rem,
   Image,
   Pill,
   Group,
@@ -102,8 +101,8 @@ export function CardsCarousel() {
   return (
     <>
       <Carousel
-        slideSize={{ base: "100%", sm: "50%" }}
-        slideGap={{ base: rem(2), sm: "xl" }}
+        slideSize={{ base: "85%", sm: "43%" }}
+        slideGap={{ base: "md", sm: "xl" }}
         align="center"
         slidesToScroll={mobile ? 1 : 2}
         loop
@@ -119,7 +118,7 @@ export function CardsCarousel() {
       <Modal
         opened={opened}
         onClose={() => setOpened(false)}
-        title={<Title>{selectedCard?.title}</Title>}
+        title={<Text fz={30}>{selectedCard?.title}</Text>}
         size="auto"
         padding="xl"
       >
@@ -141,12 +140,17 @@ export function CardsCarousel() {
                   w="100%"
                 >
                   <Stack w={isBelowMd ? "100%" : "65%"}>
-                    {" "}
                     {/* Full width on smaller screens */}
                     <Title fz={20} lh={0} mb={0} mt={20} fw={600}>
                       Description
                     </Title>
-                    <Text>{selectedCard.description}</Text>
+                    {selectedCard.longDescription.map(
+                      (paragraph: string, index: number) => (
+                        <Text key={index} mb="md">
+                          {paragraph}
+                        </Text>
+                      )
+                    )}
                   </Stack>
 
                   <Flex
@@ -157,7 +161,7 @@ export function CardsCarousel() {
                   >
                     <Stack>
                       <Title fz={20} lh={0} mb={0} fw={600}>
-                        Built in
+                        Built
                       </Title>
                       <Text>{selectedCard.year}</Text>
                     </Stack>
