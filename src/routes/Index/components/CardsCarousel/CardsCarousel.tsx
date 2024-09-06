@@ -42,25 +42,26 @@ function CardFunction({
       <Group mt="md" mb="xs" justify="center">
         <Text fw={500}>{title}</Text>
       </Group>
+      <div className={classes.cardContent}>
+        <Text size="sm" h={100} c="dimmed" lineClamp={4}>
+          {description}
+        </Text>
 
-      <Text size="sm" h={100} c="dimmed" lineClamp={4}>
-        {description}
-      </Text>
-
-      <Group mt="md" mb="xs" gap={10} align="start">
-        {languages.map((language) => (
-          <Pill
-            key={language}
-            size="sm"
-            style={{
-              backgroundColor: "var(--mantine-color-gray-2)",
-              color: "var(--mantine-color-gray-7)",
-            }}
-          >
-            {language}
-          </Pill>
-        ))}
-      </Group>
+        <Group mt="md" mb="xs" gap={10} align="start">
+          {languages.map((language) => (
+            <Pill
+              key={language}
+              size="sm"
+              style={{
+                backgroundColor: "var(--mantine-color-gray-2)",
+                color: "var(--mantine-color-gray-7)",
+              }}
+            >
+              {language}
+            </Pill>
+          ))}
+        </Group>
+      </div>
 
       {/* Button to trigger modal */}
       <Button
@@ -70,6 +71,7 @@ function CardFunction({
         radius="xl"
         fw={700}
         onClick={onViewDetails}
+        className={classes.button}
       >
         View details
       </Button>
