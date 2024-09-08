@@ -27,6 +27,8 @@
       var(--mantine-color-blue-4) 0,
       var(--mantine-color-blue-7) 100%
     );
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 .innerContent {
@@ -37,7 +39,7 @@
   display: flex;
   justify-content: space-around;
   flex-direction: row;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.75);
   border-radius: var(--mantine-radius-md);
   color: #fff;
   gap: 20px;

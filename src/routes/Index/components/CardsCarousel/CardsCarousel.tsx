@@ -40,7 +40,7 @@ function CardFunction({
       </Card.Section>
 
       <Group mt="md" mb="xs" justify="center">
-        <Text fw={500}>{title}</Text>
+        <Text fw={600}>{title}</Text>
       </Group>
       <div className={classes.cardContent}>
         <Text size="sm" h={100} c="dimmed" lineClamp={4}>
@@ -52,6 +52,7 @@ function CardFunction({
             <Pill
               key={language}
               size="sm"
+              fw={600}
               style={{
                 backgroundColor: "var(--mantine-color-gray-2)",
                 color: "var(--mantine-color-gray-7)",

@@ -72,6 +72,7 @@ export function SkillsBlock() {
             // onMouseEnter={() => setHoveredSkill(skill.title)}
             // onMouseLeave={() => setHoveredSkill(null)}
             size="sm"
+            fw={600}
             style={{
               backgroundColor: skill.categories.includes(hoveredCategory ?? "")
                 ? hoveredCategoryColor
