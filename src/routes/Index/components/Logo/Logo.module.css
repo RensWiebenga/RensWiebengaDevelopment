@@ -4,10 +4,6 @@
   align-items: center;
   gap: 20px;
 
-  img {
-    height: 40px;
-  }
-
   .title {
     color: light-dark(#000, #fff);
     font-size: 20px;
@@ -31,9 +27,9 @@
       url(/src/assets/logo_black.png),
       url(/src/assets/logo_white.png)
     );
-    background-size: 84px;
+    background-size: 60px;
     background-repeat: no-repeat;
-    width: 84px;
-    height: 44px;
+    width: 60px;
+    height: 49px;
   }
 }
