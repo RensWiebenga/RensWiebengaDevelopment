@@ -1,0 +1,15 @@
+.line {
+  width: 150px;
+  height: 5px;
+  background: #0c67a1;
+  border-radius: 5px;
+  background: var(--mantine-color-primary-0);
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    width: 100px;
+  }
+}
+
+.icon {
+  color: var(--mantine-color-primary-0);
+}
