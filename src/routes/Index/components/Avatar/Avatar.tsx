@@ -1,10 +1,10 @@
 import rensImage from "../../../../assets/rens.png";
-import { Stack } from "@mantine/core";
+import { Stack, Image } from "@mantine/core";
 
 const Avatar = () => {
   return (
     <Stack justify="center" align="center">
-      <img src={rensImage} alt="Avatar" width="350px" />
+      <Image src={rensImage} alt="Avatar" w="350px" maw="90vw"/>
     </Stack>
   );
 };
