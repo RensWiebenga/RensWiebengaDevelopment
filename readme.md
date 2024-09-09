@@ -1,3 +1,8 @@
+# Code
+Deze repo bevat de code achter het portfolio. De renswiebenga-repo is slechts daar om de dist folder in te deponeren om te releasen. 
+Deze repo is tevens gekoppeld aan de mail-server: https://dashboard.render.com/
+
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
