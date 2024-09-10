@@ -41,3 +41,7 @@
   font-size: 50px;
   outline: none !important;
 }
+
+.details {
+  align-content: flex-start;
+}

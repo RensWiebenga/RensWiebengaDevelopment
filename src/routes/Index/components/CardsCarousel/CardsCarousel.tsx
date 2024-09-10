@@ -162,7 +162,8 @@ export function CardsCarousel() {
                     justify={isBelowMd ? "space-between" : "flex-start"} // Center on mobile
                     mt={isBelowMd ? 0 : "20px"} // Adjust top margin for mobile
                     wrap={isBelowMd ? "nowrap" : "wrap"} // Wrap on mobile
-                    align={"flex-start"}
+                    align="flex-start"
+                    className={classes.details}
                   >
                     <Stack>
                       <Title fz={20} lh={0} mb={0} fw={600}>
