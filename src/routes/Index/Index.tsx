@@ -12,6 +12,12 @@ export default function Index() {
       <HeroImageBackground />
       <Space h="xl" />
       <Container>
+        <div id="about" className="section">
+          <FancyTitle title="About" icon="IconUserScan" />
+          <Space h="xl" />
+          <AboutMeBlock />
+          <Space h="xl" />
+        </div>
         <div id="skills" className="section">
           <FancyTitle title="Skills" icon="IconWorldCode" />
           <Space h="xl" />
@@ -24,12 +30,7 @@ export default function Index() {
           <CardsCarousel />
           <Space h="xl" />
         </div>
-        <div id="about" className="section">
-          <FancyTitle title="About" icon="IconUserScan" />
-          <Space h="xl" />
-          <AboutMeBlock />
-          <Space h="xl" />
-        </div>
+
         <div id="contact" className="section">
           <FancyTitle title="Contact me" icon="IconMailBolt" />
           <Space h="xl" />

@@ -55,64 +55,73 @@ export function GetInTouch() {
   };
 
   return (
-    <Paper shadow="md" radius="xl">
-      <div className={classes.wrapper}>
-        <div className={classes.innerContent}>
-          <div className={classes.contacts}>
-            <Text fz="lg" fw={700} className={classes.title} c="#fff">
-              Contact information
-            </Text>
-            <ContactIconsList />
-          </div>
-          <form className={classes.form} onSubmit={handleSubmit}>
-            <Text fz="lg" fw={700} className={classes.title}>
-              Get in touch
-            </Text>
-            <div className={classes.fields}>
-              <SimpleGrid cols={{ base: 1, sm: 2 }}>
-                <TextInput
-                  label="Your name"
-                  placeholder="John Doe"
-                  value={name}
-                  onChange={(event) => setName(event.currentTarget.value)}
-                />
-                <TextInput
-                  label="Your email"
-                  placeholder="johndoe@domain.com"
-                  required
-                  value={email}
-                  onChange={(event) => setEmail(event.currentTarget.value)}
-                />
-              </SimpleGrid>
-              <TextInput
-                mt="md"
-                label="Subject"
-                placeholder="New project, collaboration, etc."
-                required
-                value={subject}
-                onChange={(event) => setSubject(event.currentTarget.value)}
-              />
-              <Textarea
-                mt="md"
-                label="Your message"
-                placeholder="I'd like to discuss..."
-                minRows={3}
-                value={message}
-                onChange={(event) => setMessage(event.currentTarget.value)}
-              />
-              <Group justify="flex-end" mt="md">
-                <Button
-                  type="submit"
-                  className={classes.control}
-                  loading={loading}
-                >
-                  {buttonText}
-                </Button>
-              </Group>
+    <>
+      {/* <Text fz="lg" mb={5}>
+        Have a project in mind or just want to say hello? I would love to hear
+        from you!
+      </Text>
+      <Text fz="lg" mb={20}>
+        Fill out the form below, and I will get back to you as soon as possible!
+      </Text> */}
+      <Paper shadow="md" radius="xl">
+        <div className={classes.wrapper}>
+          <div className={classes.innerContent}>
+            <div className={classes.contacts}>
+              <Text fz="lg" fw={700} className={classes.title} c="#fff">
+                Contact information
+              </Text>
+              <ContactIconsList />
             </div>
-          </form>
+            <form className={classes.form} onSubmit={handleSubmit}>
+              <Text fz="lg" fw={700} className={classes.title}>
+                Get in touch
+              </Text>
+              <div className={classes.fields}>
+                <SimpleGrid cols={{ base: 1, sm: 2 }}>
+                  <TextInput
+                    label="Your name"
+                    placeholder="John Doe"
+                    value={name}
+                    onChange={(event) => setName(event.currentTarget.value)}
+                  />
+                  <TextInput
+                    label="Your email"
+                    placeholder="johndoe@domain.com"
+                    required
+                    value={email}
+                    onChange={(event) => setEmail(event.currentTarget.value)}
+                  />
+                </SimpleGrid>
+                <TextInput
+                  mt="md"
+                  label="Subject"
+                  placeholder="New project, collaboration, etc."
+                  required
+                  value={subject}
+                  onChange={(event) => setSubject(event.currentTarget.value)}
+                />
+                <Textarea
+                  mt="md"
+                  label="Your message"
+                  placeholder="I'd like to discuss..."
+                  minRows={3}
+                  value={message}
+                  onChange={(event) => setMessage(event.currentTarget.value)}
+                />
+                <Group justify="flex-end" mt="md">
+                  <Button
+                    type="submit"
+                    className={classes.control}
+                    loading={loading}
+                  >
+                    {buttonText}
+                  </Button>
+                </Group>
+              </div>
+            </form>
+          </div>
         </div>
-      </div>
-    </Paper>
+      </Paper>
+    </>
   );
 }
