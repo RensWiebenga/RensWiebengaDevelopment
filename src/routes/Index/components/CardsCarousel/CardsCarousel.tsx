@@ -47,7 +47,7 @@ function CardFunction({
           {description}
         </Text>
 
-        <Group mt="md" mb="xs" gap={10} align="start">
+        <Group mt="md" mb="xs" gap={10} align="flex-start">
           {languages.map((language) => (
             <Pill
               key={language}
