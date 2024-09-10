@@ -56,13 +56,13 @@ export function GetInTouch() {
 
   return (
     <>
-      <Text fz="lg" mb={5}>
+      {/* <Text fz="lg" mb={5}>
         Have a project in mind or just want to say hello? I would love to hear
         from you!
       </Text>
       <Text fz="lg" mb={20}>
         Fill out the form below, and I will get back to you as soon as possible!
-      </Text>
+      </Text> */}
       <Paper shadow="md" radius="xl">
         <div className={classes.wrapper}>
           <div className={classes.innerContent}>
