@@ -161,6 +161,8 @@ export function CardsCarousel() {
                     gap="xl"
                     justify={isBelowMd ? "space-between" : "flex-start"} // Center on mobile
                     mt={isBelowMd ? 0 : "20px"} // Adjust top margin for mobile
+                    wrap={isBelowMd ? "nowrap" : "wrap"} // Wrap on mobile
+                    align={"flex-start"}
                   >
                     <Stack>
                       <Title fz={20} lh={0} mb={0} fw={600}>
@@ -169,8 +171,15 @@ export function CardsCarousel() {
                       <Text>{selectedCard.year}</Text>
                     </Stack>
 
+                    <Stack>
+                      <Title fz={20} lh={0} mb={0} fw={600}>
+                        Role
+                      </Title>
+                      <Text>{selectedCard.role}</Text>
+                    </Stack>
+
                     {selectedCard.link && (
-                      <Stack gap={15}>
+                      <Stack gap={15} w={"100%"}>
                         <Title fz={20} lh={0} mb={0} fw={600}>
                           Link
                         </Title>

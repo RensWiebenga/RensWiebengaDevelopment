@@ -33,6 +33,7 @@ export const data = [
     ],
     link: "",
     year: "2020",
+    role: "Lead developer",
   },
   {
     image: embassyImage,
@@ -56,6 +57,7 @@ export const data = [
     ],
     link: "https://findmyembassy.azurewebsites.net/",
     year: "2017",
+    role: "Owner and creator",
   },
   {
     image: startdossierImage,
@@ -79,6 +81,7 @@ export const data = [
     ],
     link: "",
     year: "2023",
+    role: "Lead developer",
   },
   {
     image: thirtySecondSImage,
@@ -93,6 +96,7 @@ export const data = [
     languages: ["HTML", "jQuery", "JavaScript", "LESS", "Git"],
     link: "http://32nds.nl/bord.html",
     year: "2016",
+    role: "Owner and creator",
   },
   {
     image: emodulewijzerImage,
@@ -115,6 +119,7 @@ export const data = [
     ],
     link: "",
     year: "2014",
+    role: "Single Full Stack Developer",
   },
   {
     image: dnaPoliImage,
@@ -138,6 +143,7 @@ export const data = [
     ],
     link: "https://dna-poli.nl/",
     year: "2024",
+    role: "Lead developer",
   },
   {
     image: campaignImage,
@@ -157,6 +163,7 @@ export const data = [
     ],
     link: "https://www.umcutrecht.nl/nl/info/mr-linac",
     year: "2023",
+    role: "Single Full Stack Developer",
   },
   {
     image: loopbaanEnqueteImage,
@@ -177,6 +184,7 @@ export const data = [
     ],
     link: "https://loopbaanenquete.azurewebsites.net/",
     year: "2014",
+    role: "Single Full Stack Developer",
   },
   {
     image: gameRealmImage,
@@ -190,6 +198,7 @@ export const data = [
     languages: ["HTML", "LESS", "jQuery", "JavaScript", "PHP", "SQL"],
     link: "",
     year: "2012",
+    role: "Lead developer",
   },
   {
     image: memesImage,
@@ -203,5 +212,6 @@ export const data = [
     languages: ["HTML", "LESS", "jQuery", "JavaScript", "SpreadShirt"],
     link: "",
     year: "2012",
+    role: "Owner and creator",
   },
 ];
