@@ -5,9 +5,9 @@ import { ChangeEventHandler, useEffect, useState } from "react";
 
 const links = [
   { link: "#home", label: "Home" },
+  { link: "#about", label: "About" },
   { link: "#skills", label: "Skills" },
   { link: "#projects", label: "Projects" },
-  { link: "#about", label: "About" },
   { link: "#contact", label: "Contact" },
 ];
 

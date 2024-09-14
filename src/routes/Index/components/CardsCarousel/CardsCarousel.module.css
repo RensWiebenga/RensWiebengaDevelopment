@@ -36,8 +36,12 @@
 .control {
   background-color: var(--mantine-color-primary-0) !important;
   color: var(--mantine-color-white) !important;
-  opacity: 95% !important;
+  opacity: 80% !important;
   border: none !important;
   font-size: 50px;
   outline: none !important;
+}
+
+.details {
+  align-content: flex-start;
 }

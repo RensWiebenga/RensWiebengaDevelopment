@@ -1,6 +1,15 @@
-import { Title, Text, Container, Overlay, Stack, Anchor } from "@mantine/core";
+import {
+  Title,
+  Text,
+  Container,
+  Overlay,
+  Stack,
+  Anchor,
+  Button,
+} from "@mantine/core";
 import Avatar from "../Avatar/Avatar";
 import classes from "./HeroImageBackground.module.css";
+import { IconCoffee } from "@tabler/icons-react";
 
 export function HeroImageBackground() {
   return (
@@ -45,20 +54,15 @@ export function HeroImageBackground() {
             </Text>
           </Container>
           <div className={classes.controls}>
-            <Anchor
-              className={classes.control}
-              size="lg"
-              href="#contact"
-              fw={700}
-            >
-              Get in touch
+            <Anchor size="lg" href="#contact" fw={700}>
+              <Button
+                rightSection={<IconCoffee size={25} />}
+                className={classes.control}
+              >
+                {" "}
+                Get in touch
+              </Button>
             </Anchor>
-            {/* <Button
-              className={cx(classes.control, classes.secondaryControl)}
-              size="lg"
-            >
-              Live demo
-            </Button> */}
           </div>
         </Stack>
       </div>
